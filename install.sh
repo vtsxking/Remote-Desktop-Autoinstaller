@@ -1,11 +1,11 @@
 
 
-if [$# == 0];
+if [$# -eq 0];
 then
     echo "Enter your activation code..."
 fi
 
-if [$# == 1];
+if [$# -eq 1];
 then
     apt update
     apt upgrade
@@ -15,7 +15,7 @@ then
     DISPLAY= /opt/google/chrome-remote-desktop/start-host --code=$1 --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$(hostname)
 fi
 
-if [$# > 2];
+if [$# -gt 2];
 then
     echo "too many args..."
 fi
