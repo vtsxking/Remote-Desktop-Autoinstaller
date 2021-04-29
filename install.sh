@@ -7,6 +7,8 @@ fi
 
 if [$# == 1];
 then
+    apt update
+    apt upgrade
     wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
     apt install ./chrome-remote-desktop_current_amd64.deb
     apt install ubuntu-mate-desktop
