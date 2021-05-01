@@ -6,7 +6,7 @@ apt upgrade
 echo -e "$CYAN Createing User... $COL_RESET"
 pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
 useradd -m -p "123" "$(hostname)"
-[ $? -eq 0 ] && echo "User has been added to system!" || echo "Failed to add a user!"
+[ $? -eq 0 ] && echo "User $(hostname) has been added to system!" || echo "Failed to add a user!"
 
 
 echo -e "$CYAN Switch User... $COL_RESET"
