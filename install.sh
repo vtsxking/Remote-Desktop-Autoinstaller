@@ -11,7 +11,7 @@ adduser $(hostname) sudo
 
 echo -e "$CYAN Copying Remote Installer... $COL_RESET"
 mkdir /tmp/remote-desktop
-cp remote-install.sh /tmp/remote-desktop/remote-install.sh
+cp remote-install.sh /tmp/remote-desktop
 
 echo -e "$CYAN Switch User... $COL_RESET"
 /bin/su -s /bin/bash -c '/tmp/remote-desktop/remote-install.sh' $(hostname)
