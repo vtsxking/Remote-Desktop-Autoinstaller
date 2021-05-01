@@ -4,13 +4,12 @@ apt update
 apt upgrade
 
 echo -e "$CYAN Createing User... $COL_RESET"
-pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
-useradd -m -p "123" "$(hostname)"
-[ $? -eq 0 ] && echo "User $(hostname) has been added to system!" || echo "Failed to add a user!"
-
+useradd $(hostname) -s /bin/bash -p '*'
+adduser $(hostname) sudo
 
 echo -e "$CYAN Switch User... $COL_RESET"
 sudo su - $(hostname)
+
 
 echo -e "$CYAN Google Remote Desktop Download... $COL_RESET"
 sudo wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
