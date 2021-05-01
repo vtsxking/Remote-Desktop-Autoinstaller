@@ -3,6 +3,7 @@
 
 echo -e "$CYAN Google Remote Desktop Download... $COL_RESET"
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+chmod -R 777 chrome-remote-desktop_current_amd64.deb
 apt install ./chrome-remote-desktop_current_amd64.deb
 apt install ubuntu-mate-desktop
 
